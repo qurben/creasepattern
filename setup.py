@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="creasepattern",
-    version="0.0.1",
+    version="0.0.2",
     author="Gerben Oolbekkink",
     author_email="g.j.w.oolbekkink@gmail.com",
     description="Origami Crease Pattern tools",
@@ -23,4 +23,7 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
+    install_requires=[
+        "Pillow"
+    ]
 )
