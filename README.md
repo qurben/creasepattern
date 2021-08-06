@@ -23,7 +23,7 @@ Convert `.cp` files to `.svg`
 ```python
 from creasepattern import cp2svg
 
-cp2png('file.cp', 'file.svg')
+cp2svg('file.cp', 'file.svg')
 ```
 
 ## Roadmap
