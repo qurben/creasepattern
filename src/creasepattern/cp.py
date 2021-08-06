@@ -54,7 +54,7 @@ class CpLine:
             return (255, 0, 0)
         if (self.type == 3):
             return (0, 0, 255)
-        if (self.type == 4):
+        if (self.type == 4 or self.type == 0):
             return (193, 193, 193)
 
         raise ValueError("Unknown line type in .cp file")
