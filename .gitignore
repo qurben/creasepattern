@@ -2,3 +2,5 @@
 env
 *.cp
 *.png
+dist
+*.egg-info

@@ -1,20 +1,26 @@
-from setuptools import find_packages, setup
+import setuptools
 
-setup(
-    name='cp2png',
-    version="0.1",
-    url='https://github.com/qurben/cp2png',
-    license='MIT',
-    author='Gerben Oolbekkink',
-    author_email='g.j.w.oolbekkink@gmail.com',
-    description='Convert .cp files to .png using Pillow',
-    long_description=open('README.rst').read(),
-    packages=find_packages(exclude=['tests', 'tests.*']),
-    zip_safe=False,
-    include_package_data=True,
-    install_requires=[
-        'setuptools',
-        'Pillow >= 8.0'
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="creasepattern",
+    version="0.0.1",
+    author="Gerben Oolbekkink",
+    author_email="g.j.w.oolbekkink@gmail.com",
+    description="Origami Crease Pattern tools",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/qurben/creasepattern",
+    project_urls={
+        "Bug Tracker": "https://github.com/qurben/creasepattern/issues",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
-    entry_points={},
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
 )

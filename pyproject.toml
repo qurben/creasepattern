@@ -1,0 +1,6 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "Pillow>8"
+]
+build-backend = "setuptools.build_meta"
