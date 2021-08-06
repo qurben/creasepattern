@@ -2,20 +2,35 @@ import math
 
 class Cp:
     def __init__(self, filename):
+        self.lines = []
+        self.minX = 0
+        self.maxX = 0
+        self.minY = 0
+        self.maxY = 0
         with open(filename, 'r') as cp:
-            lines = cp.readlines()
 
-        lines = [line.split(' ') for line in lines]
-        self.lines = [CpLine(int(type), float(x1), float(y1), float(
-            x2), float(y2)) for [type, x1, y1, x2, y2] in lines]
+            while True:
+                next_line = cp.readline()
 
-        xVals = sum([[x.x1, x.x2] for x in self.lines], [])
-        yVals = sum([[x.y1, x.y2] for x in self.lines], [])
+                if not next_line:
+                    break;
 
-        self.minX = min(xVals)
-        self.maxX = max(xVals)
-        self.minY = min(yVals)
-        self.maxY = max(yVals)
+                [type, x1, y1, x2, y2] = next_line.split(" ")
+
+                cp_line = CpLine(int(type), float(x1), float(y1), float(x2), float(y2))
+
+                self.lines.append(cp_line)
+
+                if self.minX > cp_line.x1: self.minX = cp_line.x1
+                if self.minX > cp_line.x2: self.minX = cp_line.x2
+                if self.minY > cp_line.y1: self.minY = cp_line.y1
+                if self.minY > cp_line.y2: self.minY = cp_line.y2
+
+                if self.maxX < cp_line.x1: self.maxX = cp_line.x1
+                if self.maxX < cp_line.x2: self.maxX = cp_line.x2
+                if self.maxY < cp_line.y1: self.maxY = cp_line.y1
+                if self.maxY < cp_line.y2: self.maxY = cp_line.y2
+
 
     def size(self):
         width = math.ceil(self.maxX-self.minX)
