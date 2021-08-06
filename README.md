@@ -1,6 +1,6 @@
 # creasepattern
 
-Basic topls to work with Origami Crease Patterns.
+Basic tools to work with Origami Crease Patterns.
 
 ## Usage
 
