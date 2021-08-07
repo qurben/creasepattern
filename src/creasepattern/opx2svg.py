@@ -1,9 +1,8 @@
-from os import linesep
-from .from_cp import from_cp
+from .from_opx import from_opx
 from .to_svg import to_svg
-    
-def cp2svg(infile, outfile, margin=10):
-    cp = from_cp(infile)
+
+def opx2svg(infile, outfile, margin=10):
+    cp = from_opx(infile)
 
     svgString = to_svg(cp, margin)
     

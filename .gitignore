@@ -4,3 +4,4 @@ env
 *.png
 dist
 *.egg-info
+*.svg
