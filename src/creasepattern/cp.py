@@ -1,5 +1,6 @@
 import math
 from enum import Enum
+from typing import List
 
 
 class CpLineType(Enum):
@@ -56,7 +57,7 @@ class BoundingBox:
 
 
 class Cp:
-    def __init__(self, lines: list[CpLine], circles: list[CpCircle] = None):
+    def __init__(self, lines: List[CpLine], circles: List[CpCircle] = None):
         if circles is None:
             circles = []
         self.lines = lines

@@ -1,3 +1,5 @@
+from typing import List
+
 from .cp import Cp, CpLine, CpLineType
 
 
@@ -25,7 +27,7 @@ def from_cp(filename: str) -> Cp:
     return Cp(lines)
 
 
-def from_cp_str(lines: list[str]) -> Cp:
+def from_cp_str(lines: List[str]) -> Cp:
     """
     Load the .cp file format from a string
     """
