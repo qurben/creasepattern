@@ -1,5 +1,5 @@
 from .cp import Cp, CpLine
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET
 
 def from_opx(infile) -> Cp:
     tree = ET.parse(infile)
