@@ -1,4 +1,4 @@
-from creasepattern import cp2png, cp2svg, opx2png
+from creasepattern import cp2png, cp2svg, opx2png, orh2png
 import sys
 
 if len(sys.argv) != 4:
@@ -10,6 +10,9 @@ if len(sys.argv) != 4:
 if sys.argv[2].endswith('.opx'):
     if sys.argv[1] == 'png':
         opx2png(sys.argv[2], sys.argv[3])
+elif sys.argv[2].endswith('.orh'):
+    if sys.argv[1] == 'png':
+        orh2png(sys.argv[2], sys.argv[3])
 else:
     if sys.argv[1] == 'svg':
         cp2svg(sys.argv[2], sys.argv[3])

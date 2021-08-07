@@ -1,7 +1,8 @@
 from .cp import Cp, CpLine
 import defusedxml.ElementTree as ET
 
-def from_opx(infile) -> Cp:
+
+def from_opx(infile: str) -> Cp:
     tree = ET.parse(infile)
 
     root = tree.getroot()

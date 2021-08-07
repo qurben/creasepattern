@@ -4,6 +4,9 @@ from .cp import Cp
 
 
 def to_png(cp: Cp, size=2048, margin=20, aa_scale=4) -> Image:
+    """
+    Draw a Cp object on an Image.
+    """
     width, height = cp.size()
 
     if width < height:
@@ -25,8 +28,8 @@ def to_png(cp: Cp, size=2048, margin=20, aa_scale=4) -> Image:
                        fill=(255, 255, 255))
 
         for line in cp.lines:
-            draw.line((((line.x1 - cp.minX) * innerFactor) + margin * aa_scale, ((line.y1 - cp.minY) * innerFactor) + margin * aa_scale,
-                       ((line.x2 - cp.minX) * innerFactor) + margin * aa_scale, ((line.y2 - cp.minY) * innerFactor) + margin * aa_scale), fill=line.color(), width=aa_scale)
+            draw.line((((line.x1 - cp.bb.minX) * innerFactor) + margin * aa_scale, ((line.y1 - cp.bb.minY) * innerFactor) + margin * aa_scale,
+                       ((line.x2 - cp.bb.minX) * innerFactor) + margin * aa_scale, ((line.y2 - cp.bb.minY) * innerFactor) + margin * aa_scale), fill=line.color(), width=aa_scale)
 
         # Apply anti alias
         im = im.resize(
