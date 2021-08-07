@@ -4,6 +4,20 @@ Basic tools to work with Origami Crease Patterns.
 
 ## Usage
 
+Install with pip
+
+```
+pip install creasepattern
+```
+
+This installs the `crease` executable:
+
+```
+Usage:
+        crease creasepattern.cp image.png
+        crease creasepattern.cp image.svg
+```
+
 ### `cp2png(infile, outfile, size=2048, margin=20, aa_scale=4)`
 
 Convert `.cp` files to `.png`

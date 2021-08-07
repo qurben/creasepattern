@@ -1,4 +1,4 @@
-from .cp import Cp, CpLine
+from .cp import Cp, CpLine, CpLineType
 
 
 def from_cp(filename: str) -> Cp:
@@ -17,7 +17,7 @@ def from_cp(filename: str) -> Cp:
 
             [type, x1, y1, x2, y2] = next_line.split(" ")
 
-            cp_line = CpLine(int(type), float(
+            cp_line = CpLine(CpLineType(int(type)), float(
                 x1), float(y1), float(x2), float(y2))
 
             lines.append(cp_line)
@@ -32,9 +32,9 @@ def from_cp_str(lines: list[str]) -> Cp:
     cp_lines = []
 
     for line in lines:
-        [type, x1, y1, x2, y2] = line.split(" ")
+        [line_type, x1, y1, x2, y2] = line.split(" ")
 
-        cp_line = CpLine(int(type), float(
+        cp_line = CpLine(CpLineType(int(line_type)), float(
             x1), float(y1), float(x2), float(y2))
 
         cp_lines.append(cp_line)
