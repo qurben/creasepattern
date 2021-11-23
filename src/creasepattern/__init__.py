@@ -13,5 +13,6 @@ from .from_orh import from_orh
 
 from .to_png import to_png
 from .to_svg import to_svg
+from .to_cp import to_cp
 
 from .main import main

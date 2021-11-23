@@ -1,8 +1,7 @@
-from .cp import Cp, CpLineType
-from .util import line_color_rgb, line_width
+from .cp import Cp
 
 
-def to_svg(cp: Cp) -> str:
+def to_cp(cp: Cp) -> str:
     """
     Convert a Cp object to a cp file string.
     """
