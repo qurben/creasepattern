@@ -50,6 +50,10 @@ Convert Oripa `.opx` to `.png`
 
 Convert Oripa `.opx` to `.svg`
 
+### `opx2cp(infile, outfile)`
+
+Convert Oripa `.opx` to `.cp`
+
 ### `orh2png(infile, outfile, size=2048, margin=20, aa_scale=4)`
 
 Convert Orihime `.orh` to `.png`
@@ -59,6 +63,10 @@ Convert Orihime `.orh` to `.png`
 Convert Orihime `.orh` to `.svg`.
 
 Only supports exporting normal lines, so no folded bases, aux circles and non-interfering aux lines.
+
+### `orh2cp(infile, outfile)`
+
+Convert Orihime `.orh` to `.cp`.
 
 ### `from_cp(infile: str) -> Cp`
 
@@ -83,6 +91,10 @@ Convert a `Cp` object to an svg string
 ### `to_png(cp: Cp) -> Image`
 
 Convert a `Cp` object to a PIL Image
+
+### `to_cp`(cp : Cp) -> str`
+
+Convert a `Cp` object to a `.cp` file string.
 
 ## Roadmap
 

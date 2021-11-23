@@ -1,7 +1,7 @@
 import os
 import sys
 
-from creasepattern import cp2png, cp2svg, opx2png, orh2png, orh2svg, opx2svg
+from creasepattern import cp2png, cp2svg, opx2png, orh2png, orh2svg, opx2svg, orh2cp, opx2cp
 
 
 def main():
@@ -17,8 +17,10 @@ def main():
     conversion_map = {
         '.opx.png': opx2png,
         '.opx.svg': opx2svg,
+        '.opx.cp': opx2cp,
         '.orh.png': orh2png,
         '.orh.svg': orh2svg,
+        '.orh.cp': orh2cp,
         '.cp.png': cp2png,
         '.cp.svg': cp2svg,
     }
